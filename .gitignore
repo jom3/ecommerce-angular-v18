@@ -9,6 +9,9 @@ src/environments/environment.local.ts
 /out-tsc
 /bazel-out
 
+# Visual Studio Code Configurations
+/.vscode
+
 # Node
 /node_modules
 npm-debug.log
