@@ -13,7 +13,6 @@ export class AddToCartButtonComponent {
   addToCartEvent = output<Product>()
 
   public addToCart():void{
-    console.log(this.product())
     this.addToCartEvent.emit(this.product()!)
   }
 }
