@@ -1,0 +1,14 @@
+@keyframes slideDownCart {
+  from{
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.show-cart-animation{
+  animation: slideDownCart .3s ease-in forwards;
+}
