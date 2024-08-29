@@ -1,0 +1,25 @@
+<div class="relative flex w-96 h-[600px] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+  <div class="relative mx-4 mt-4 h-96 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
+    <img
+      [routerLink]="['/products/details',product().id]"
+      src={{product().image}}
+      class="h-full w-full object-contain cursor-pointer"
+    />
+  </div>
+  <div class="p-6">
+    <div class="mb-2 flex items-center gap-2 justify-between">
+      <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
+        {{product().title}}
+      </p>
+      <p class="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
+         {{ product().price | currency : '$' }}
+      </p>
+    </div>
+    <p class="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
+      {{product().description | slice:0:300}}
+    </p>
+  </div>
+  <div class="p-6 pt-0">
+    <add-to-cart-button [product]="product()"/>
+  </div>
+</div>
