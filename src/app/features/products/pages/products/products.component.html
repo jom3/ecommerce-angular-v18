@@ -1,0 +1,5 @@
+<div class="my-5 gap-5 flex flex-row flex-wrap justify-evenly">
+  @for (product of products(); track product.id) {
+    <product-card [product]="product"/>
+  }
+</div>
